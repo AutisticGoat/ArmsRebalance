@@ -7,6 +7,12 @@ local function ActBullet_Spine(bul)
 		cs.SetCaret(bul.x, bul.y, cs.CARET_FLASH, cs.DIR_LEFT)
 		return
 	end
+
+	if bul.count1 == 1 and cs.IsMaxExpMyChar(bul.tgt_mc) then
+		bul.life_count = 40
+		bul.damage = 2
+	end
+
 	--start
 	if bul.act_no == 0 then
 		bul.act_no = 1

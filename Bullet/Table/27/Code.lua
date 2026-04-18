@@ -63,14 +63,14 @@ local function ActBullet_Sword3(bul)
 		bul.ym = 0
 		bul.act_wait = bul.act_wait + 1
 
-		if 0 == cs.Random(-1, 1) then
+		-- if 0 == cs.Random(-1, 1) then
 			cs.PlaySoundObject(cs.WAVE_SWORD, 1)
 			if cs.mod(cs.Random(0, 1), 2) ~= 0 then
 				cs.SetBullet(bul.tgt_mc, cs.BULLET_EDGE, bul.x + cs.Random(-64, 64) * cs.VS, bul.y + cs.Random(-64, 64) * cs.VS, cs.DIR_LEFT)
 			else
 				cs.SetBullet(bul.tgt_mc, cs.BULLET_EDGE, bul.x + cs.Random(-64, 64) * cs.VS, bul.y + cs.Random(-64, 64) * cs.VS, cs.DIR_RIGHT)
 			end
-		end
+		-- end
 		if bul.act_wait > 50 then
 			bul.cond = 0
 		end

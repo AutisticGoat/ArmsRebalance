@@ -2,7 +2,7 @@
   "__group_comment" : "08スピン",
   "__single_comment" : "スピン",
   "is_special" : false,
-  "damage" : 3,
+  "damage" : 1,
   "life" : 1,
   "life_count" : 32,
   "light_offset" : 0,
