@@ -21,3 +21,14 @@
 - Maxed-out energy buffs:
   - Increased simultaneous on-screen balls quantity (4 > 5)
   - Increased ball duration (100 > 150)
+
+### Blade: 
+- Changed energy values:
+  - Level 1: 30 > 20
+  - Level 2: 60 > 30
+  - Level 3: 0 > 10
+- Now slash burst is consistent
+- Reduced slash damage (3 > 1)
+- Maxed-out energy buffs
+  - Increased slash damage (1 > 2)
+  - Increased slash duration (32 > 40)
