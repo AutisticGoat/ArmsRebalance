@@ -1,9 +1,39 @@
+local newShootParams = {
+	[1] = {
+		damage = 3,
+		life = 1,
+	},
+	[2] = {
+		damage = 3,
+		life = 2,
+	},
+	[3] = {
+		damage = 4,
+		life = 2,
+	},
+}
+
 --ファイアボール
 function ActBullet_FireBall(bul, level)
 	local bBreak
 
+	local newParams = newShootParams[level]
+
+	bul.damage = newParams.damage
+
 	--時間消滅
 	bul.count1 = bul.count1 + 1
+
+	if bul.count1 == 1 then
+		bul.life = newParams.life
+
+		if cs.IsMaxExpMyChar(bul.tgt_mc) then 
+			bul.life_count = 150
+			bul.damage = 3
+			bul.life = 3
+		end
+	end
+
 	if bul.count1 > bul.life_count then
 		bul.cond = 0
 		cs.SetCaret(bul.x, bul.y, cs.CARET_FLASH, cs.DIR_LEFT)

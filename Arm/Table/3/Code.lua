@@ -1,23 +1,32 @@
+local bullets = {
+	[1] = cs.BULLET_FIREBALL1,
+	[2] = cs.BULLET_FIREBALL2,
+	[3] = cs.BULLET_FIREBALL3,
+}
+
 --FireBall
 local function ShootBullet_FireBall(mc_no, level)
-	local bul_no
+	local bul_no = bullets[level]
+	local maxBalls = level + (cs.IsMaxExpMyChar(mc_no) and 1 or 0)
 
-	if level == 1 then
-		if cs.CountArmsBullet(mc_no, 3) > 1 then
-			return
-		end
-		bul_no = cs.BULLET_FIREBALL1
-	elseif level == 2 then
-		if cs.CountArmsBullet(mc_no, 3) > 2 then
-			return
-		end
-		bul_no = cs.BULLET_FIREBALL2
-	elseif level == 3 then
-		if cs.CountArmsBullet(mc_no, 3) > 3 then
-			return
-		end
-		bul_no = cs.BULLET_FIREBALL3
-	end
+	if cs.CountArmsBullet(mc_no, 3) > maxBalls then return end
+
+	-- if level == 1 then
+	-- 	if cs.CountArmsBullet(mc_no, 3) > 1 then
+	-- 		return
+	-- 	end
+	-- 	bul_no = cs.BULLET_FIREBALL1
+	-- elseif level == 2 then
+	-- 	if cs.CountArmsBullet(mc_no, 3) > 2 then
+	-- 		return
+	-- 	end
+	-- 	bul_no = cs.BULLET_FIREBALL2
+	-- elseif level == 3 then
+	-- 	if  cs.CountArmsBullet(mc_no, 3) > 3 then
+	-- 		return
+	-- 	end
+	-- 	bul_no = cs.BULLET_FIREBALL3
+	-- end
 
 	if cs.gKeyMCTrg[1 + mc_no] & cs.gKeyShot ~= 0 then
 		if cs.UseArmsEnergy(mc_no, 1) == false then
