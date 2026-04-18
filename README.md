@@ -12,3 +12,12 @@
 - Maxed-out energy buffs:
   - Increased damage to 8
   - Removed 2 simultaneous shots limit
+
+### Fireball:
+- Changed general damage:
+  - Level 1: 4 > 3
+  - Level 2: 6 (remains the same)
+  - Level 3: 6 > 8
+- Maxed-out energy buffs:
+  - Increased simultaneous on-screen balls quantity (4 > 5)
+  - Increased ball duration (100 > 150)
