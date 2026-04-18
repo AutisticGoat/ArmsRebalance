@@ -1,6 +1,27 @@
+local newParams = {
+	[1] = {
+		damage = 2,
+		lifeCount = 12,
+	}, 
+	[2] = {
+		damage = 4,
+		lifeCount = 14,
+	}, 
+	[3] = {
+		damage = 6,
+		lifeCount = 16,
+	}, 
+}
+
 --ポーラスター
 function ActBullet_PoleStar(bul, level)
 	--時間消滅
+
+	local newShootParams = newParams[level]
+
+	bul.life_count = newShootParams.lifeCount
+	bul.damage = newShootParams.damage
+
 	bul.count1 = bul.count1 + 1
 	if bul.count1 > bul.life_count then
 		bul.cond = 0
