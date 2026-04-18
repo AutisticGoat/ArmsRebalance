@@ -1,0 +1,28 @@
+{
+  "__group_comment" : "10スーパーミサイル",
+  "is_special" : true,
+  "damage" : 0,
+  "life" : 10,
+  "life_count" : 30,
+  "light_offset" : 16,
+  "bbits" : {
+    "BBITS_BREAKBLOCK" : false,
+    "BBITS_SHOWER" : false,
+    "BBITS_THROWMAP" : false,
+    "BBITS_REPLACE" : true,
+    "BBITS_NOBREAK" : false,
+    "BBITS_BLOCKBUSTER" : true,
+    "BBITS_BLOCKERASE" : false,
+    "BBITS_NOBANISH" : true
+  },
+  "enemyXL" : 2,
+  "enemyYL" : 2,
+  "blockXL" : 2,
+  "blockYL" : 2,
+  "view" : {
+    "front" : 8,
+    "top" : 8,
+    "back" : 8,
+    "bottom" : 8
+  }
+}
