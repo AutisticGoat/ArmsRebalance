@@ -9,7 +9,8 @@ local function ShootBullet_Frontia1(mc_no, level)
 		bul_no = cs.BULLET_FRONTIA3
 	end
 
-	if cs.CountArmsBullet(mc_no, 1) > 3 then
+
+	if not cs.IsMaxExpMyChar(mc_no) and cs.CountArmsBullet(mc_no, 1) > 3 then
 		return
 	end
 	if cs.gKeyMCTrg[1 + mc_no] & cs.gKeyShot ~= 0 then

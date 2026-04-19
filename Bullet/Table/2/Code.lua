@@ -3,12 +3,19 @@ local inc = 0
 --スネーク
 function ActBullet_Frontia2And3(bul, level)
 	--時間消滅
+	if cs.IsMaxExpMyChar(bul.tgt_mc) then
+		bul.damage = 12
+		bul.life_count = 40
+	end
+
 	bul.count1 = bul.count1 + 1
+
 	if bul.count1 > bul.life_count then
 		bul.cond = 0
 		cs.SetCaret(bul.x, bul.y, cs.CARET_FLASH, cs.DIR_LEFT)
 		return
 	end
+
 
 	--start
 	if bul.act_no == 0 then
@@ -51,17 +58,17 @@ function ActBullet_Frontia2And3(bul, level)
 		if bul.direct == cs.DIR_LEFT or bul.direct == cs.DIR_RIGHT then
 			if cs.mod(bul.count1, 5) == 2 then
 				if bul.ym < 0 then
-					bul.ym =  cs.VS * 2
+					bul.ym =  cs.VS * 1.25
 				else
-					bul.ym = -cs.VS * 2
+					bul.ym = -cs.VS * 1.25
 				end
 			end
 		elseif bul.direct == cs.DIR_UP or bul.direct == cs.DIR_DOWN then
 			if cs.mod(bul.count1, 5) == 2 then
 				if bul.xm < 0 then
-					bul.xm =  cs.VS * 2
+					bul.xm =  cs.VS * 1.25
 				else
-					bul.xm = -cs.VS * 2
+					bul.xm = -cs.VS * 1.25
 				end
 			end
 		end
