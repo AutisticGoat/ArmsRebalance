@@ -9,7 +9,6 @@ local function ShootBullet_Frontia1(mc_no, level)
 		bul_no = cs.BULLET_FRONTIA3
 	end
 
-
 	if not cs.IsMaxExpMyChar(mc_no) and cs.CountArmsBullet(mc_no, 1) > 3 then
 		return
 	end
