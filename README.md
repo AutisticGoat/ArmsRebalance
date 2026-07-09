@@ -46,3 +46,9 @@
 - Maxed-out energy buffs
   - Increased damage: 12
   - Increased shot duration
+
+### Spur
+- Changed energy values
+  - Level 1: 40 > 60
+  - Level 2: 60 > 72
+  - Level 3: 200 > 300
