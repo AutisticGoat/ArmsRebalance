@@ -32,3 +32,17 @@
 - Maxed-out energy buffs
   - Increased slash damage (1 > 2)
   - Increased slash duration (32 > 40)
+ 
+### Snake
+- Increased general damage:
+  - Level 1: 4 > 5
+  - Level 2: 6 > 8
+  - Level 3: 8 > 10
+- Changed energy levels:
+  - Level 1: 30 > 20
+  - Level 2: 40 > 30
+  - Level 3: 16 > 15
+- Increased general shot duration
+- Maxed-out energy buffs
+  - Increased damage: 12
+  - Increased shot duration
